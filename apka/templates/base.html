@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - moja apka</title>
+</head>
+<body>
+    <ul id="navigation">
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+    </ul>
+    <h1>Moja apka</h1>
+{# komentarz #}
+<div id="content">{%  block content %}{% endblock %}</div>
+</body>
+</html>
